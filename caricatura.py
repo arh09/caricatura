@@ -21,9 +21,9 @@ img_blur = cv2.medianBlur(img_gray, 7)
 
 # -- PASO 4 --
 # Detectamos y mejoramos los bordes
-img_edge = cv2.Canny(img_blur, 30, 120)
-img_edge = cv2.bitwise_not(img_edge)
-# img_edge = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)
+# img_edge = cv2.Canny(img_blur, 30, 120)
+# img_edge = cv2.bitwise_not(img_edge)
+img_edge = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)
 
 # -- PASO 5 --
 # Convertimos de nuevo a color para que pueda ser bit-AND con la imagen a color
